@@ -20,7 +20,8 @@ fs.createReadStream("./src/utils/tireSizeCSV.csv")
     }
   })
   .on('end', () => {
-    console.log(tempWholeArr);
+    console.log(tempWholeArr)
+    fs.writeFile("./src/utils/write.js", tempWholeArr)
   })
   ;
 
